@@ -2,18 +2,18 @@
 StayClassyJSON was written in reponse to how messy using JSON dictionaries are in Python and using dot-notation is *so* much easier.
 
 ## Usage
-There is more than enough information about how to use this module in the test_StayClassyJSON file. But here are some real world examples here:
- >>> from StayClassyJSON import ClassyJSON
- >>> SAMPLE_JSON = {
- ...   'foo': {
- ...     'bar': 123
- ...   },
- ...   'boo': [1, 2, 3],
- ...   'mar': "par"
- ... }
- >>> example = ClassyJSON(SAMPLE_JSON)
- >>> example.foo.bar
- 123
+There is more than enough information about how to use this module in the `test_StayClassyJSON` file. But here are some real world examples here:
+    >>> from StayClassyJSON import ClassyJSON
+    >>> SAMPLE_JSON = {
+    ...   'foo': {
+    ...     'bar': 123
+    ...   },
+    ...   'boo': [1, 2, 3],
+    ...   'mar': "par"
+    ... }
+    >>> example = ClassyJSON(SAMPLE_JSON)
+    >>> example.foo.bar
+    123
  
 There is also ClassyJSONString for when you know your JSON will be held in a string and ClassyJSONFile for when you know your JSON will be stored in a file. You can open the file and just pass that class the file object.
 
