@@ -1,1 +1,1 @@
-from StayClassyJSON import ClassyJSON, ClassyJSONFile
+from StayClassyJSON import ClassyJSON, ClassyJSONString, ClassyJSONFile

@@ -5,7 +5,7 @@ except ImportError:
 import unittest
 from StringIO import StringIO
 
-from StayClassyJSON import ClassyJSONFile, ClassyJSON, BaseJSONProcessor
+from StayClassyJSON import ClassyJSON, ClassyJSONString, ClassyJSONFile, BaseJSONProcessor
 
 
 class BaseClassyJSONTests(unittest.TestCase):
@@ -32,7 +32,12 @@ class TestFileJson(BaseClassyJSONTests):
 class TestStringJson(BaseClassyJSONTests):
     def test_json_parser(self):
         json_str = jsonsdump(self.SAMPLE_JSON)
-        classy_json = ClassyJSON(json_str)
+        classy_json = ClassyJSONString(json_str)
+        self.run_tests(classy_json)
+
+class TestClassyJson(BaseClassyJSONTests):
+    def test_json_parser(self):
+        classy_json = ClassyJSON(self.SAMPLE_JSON)
         self.run_tests(classy_json)
         
 class TestBaseJsonProcessor(BaseClassyJSONTests):
