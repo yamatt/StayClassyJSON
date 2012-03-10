@@ -3,6 +3,7 @@ StayClassyJSON was written in reponse to how messy using JSON dictionaries are i
 
 ## Usage
 There is more than enough information about how to use this module in the `test_StayClassyJSON` file. But here are some real world examples here:
+
     >>> from StayClassyJSON import ClassyJSON
     >>> SAMPLE_JSON = {
     ...   'foo': {
