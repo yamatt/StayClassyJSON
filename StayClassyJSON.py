@@ -22,7 +22,7 @@ except ImportError:
     
 class BaseJSONProcessor(object):
     def __init__(self, json_dict):
-        for k,v in json_dict.iteritems():
+        for k,v in json_dict.items():
             if isinstance(v, dict):
                 setattr(self, k, BaseJSONProcessor(v))
             else:

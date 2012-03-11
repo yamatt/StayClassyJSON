@@ -21,7 +21,7 @@ try:
 except ImportError:
     from simplejson import dumps as jsonsdump
 import unittest
-from StringIO import StringIO
+from io import StringIO
 
 from StayClassyJSON import ClassyJSON, ClassyJSONString, ClassyJSONFile, BaseJSONProcessor
 
@@ -36,9 +36,9 @@ class BaseClassyJSONTests(unittest.TestCase):
     }
     
     def run_tests(self, classy_json):
-        self.assertEquals(self.SAMPLE_JSON['foo']['bar'], classy_json.foo.bar)
-        self.assertEquals(self.SAMPLE_JSON['boo'], classy_json.boo)
-        self.assertEquals(self.SAMPLE_JSON['mar'], classy_json.mar)
+        self.assertEqual(self.SAMPLE_JSON['foo']['bar'], classy_json.foo.bar)
+        self.assertEqual(self.SAMPLE_JSON['boo'], classy_json.boo)
+        self.assertEqual(self.SAMPLE_JSON['mar'], classy_json.mar)
 
 class TestFileJson(BaseClassyJSONTests):
     def test_file_parser(self):
